@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Tableau de Bord</h1>
+    <p>Entrez votre code promo pour vérifier vos commissions :</p>
+  </header>
+
+  <section class="promo-section">
+    <form id="promoForm">
+      <input type="text" id="promoCode" placeholder="Entrez votre code promo" required>
+      <button type="submit">Vérifier</button>
+    </form>
+  </section>
+
+  <section id="results" class="hidden">
+    <h2>Vos Commissions</h2>
+    <div class="bookmaker-commissions">
+      <div id="1xbet" class="bookmaker">
+        <h3>1xBet</h3>
+        <p>Commission générée : <span id="1xbetCommission">0</span> XAF</p>
+        <button onclick="withdraw('1xbet')">Retirer</button>
+      </div>
+      <div id="melbet" class="bookmaker">
+        <h3>Melbet</h3>
+        <p>Commission générée : <span id="melbetCommission">0</span> XAF</p>
+        <button onclick="withdraw('melbet')">Retirer</button>
+      </div>
+      <div id="betwinner" class="bookmaker">
+        <h3>Betwinner</h3>
+        <p>Commission générée : <span id="betwinnerCommission">0</span> XAF</p>
+        <button onclick="withdraw('betwinner')">Retirer</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
